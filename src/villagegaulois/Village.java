@@ -69,11 +69,14 @@ public class Village {
 		return chaine.toString();
 	}
 
-	public String rechercherVendeursProduit(String Produit) {
+	public String rechercherVendeursProduit(String produit) {
 		StringBuilder chaine = new StringBuilder();
-		chaine.append("Les vendeurs qui proposent des" + Produit + " sont : \n");
-		for (int i = 0; i < marché.trouverEtals(Produit).length; i++) {
-			chaine.append("- " + marché.trouverEtals(Produit)[i].getVendeur().getNom());
+		Etal[] rechercheProduit= marché.trouverEtals(produit);
+		chaine.append("Les vendeurs qui proposent des" + produit + " sont : \n");
+		for (int i = 0; i < rechercheProduit.length; i++) {
+			if (rechercheProduit[i]!= null) {
+				chaine.append("- " + rechercheProduit[i].getVendeur().getNom());
+			}
 		}
 		return chaine.toString();
 	}
