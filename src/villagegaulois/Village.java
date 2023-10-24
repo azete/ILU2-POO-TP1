@@ -45,7 +45,6 @@ public class Village {
 		}
 		return null;
 	}
-
 	public String afficherVillageois() {
 		StringBuilder chaine = new StringBuilder();
 		if (nbVillageois < 1) {
