@@ -5,10 +5,11 @@ import personnages.Druide;
 import personnages.Gaulois;
 import villagegaulois.Etal;
 import villagegaulois.Village;
+import villagegaulois.VillageSansChefExeception;
 
 public class Scenario {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws VillageSansChefExeception {
 		Village village = new Village("le village des irreductibles", 10, 5);
 		Chef abraracourcix = new Chef("Abraracourcix", 10, village);
 		village.setChef(abraracourcix);
